@@ -216,15 +216,7 @@ function formatDate(date) {
           container.appendChild(noEntries);
         } else {
           const total = entries.reduce((sum, amount) => sum + amount, 0);
-          
-          const totalInfo = document.createElement('p');
-          totalInfo.innerHTML = `Total: <b>${total} ${this.unit}</b>`;
-          container.appendChild(totalInfo);
-          
-          const goalInfo = document.createElement('p');
-          goalInfo.innerHTML = `Goal: <b>${this.goal} ${this.unit}</b>`;
-          container.appendChild(goalInfo);
-          
+                   
           const remaining = this.goal > total ? this.goal - total : 0;
           const remainingInfo = document.createElement('p');
           remainingInfo.innerHTML = `Remaining: <b>${remaining} ${this.unit}</b>`;
